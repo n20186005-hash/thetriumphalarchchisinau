@@ -1,7 +1,17 @@
-import { useTranslations } from 'next-intl';
+import { useTranslations, useLocale } from 'next-intl';
+
+const MAPS_EMBED_SRC =
+  'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4837.538071981371!2d28.832602599999998!3d47.024783!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40c97c3470a2d9b5%3A0xc74f4ac8ebc6b645!2z5Yev5peL6Zeo!5e1!3m2!1szh-CN!2s!4v1787900948070!5m2!1szh-CN!2s';
 
 export default function MapEmbed() {
   const t = useTranslations('mapSection');
+  const locale = useLocale();
+  const titleMap: Record<string, string> = {
+    en: 'Google Maps - The Triumphal Arch (Chișinău)',
+    ro: 'Google Maps - Arcul de Triumf (Chișinău)',
+    zh: 'Google 地图 - 凯旋门（基希讷乌）',
+  };
+  const iframeTitle = titleMap[locale] || titleMap.en;
 
   return (
     <section id="map" className="section-padding" style={{ background: 'var(--bg-secondary)' }}>
@@ -25,14 +35,14 @@ export default function MapEmbed() {
             This is for visual cleanliness only. Google's Terms of Service apply.
           */}
           <iframe
-            src="https://maps.google.com/maps?q=The+Triumphal+Arch+Chisinau+Moldova&output=embed"
+            src={MAPS_EMBED_SRC}
             width="100%"
             height="450"
             style={{ border: 0 }}
             allowFullScreen
             loading="lazy"
-            referrerPolicy="no-referrer-when-downgrade"
-            title="Google Maps - The Triumphal Arch"
+            referrerPolicy="strict-origin-when-cross-origin"
+            title={iframeTitle}
           />
         </div>
 

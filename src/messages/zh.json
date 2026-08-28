@@ -1,7 +1,7 @@
 {
   "meta": {
-    "title": "凯旋门 (The Triumphal Arch)",
-    "description": "基希讷乌凯旋门的完整旅游指南。了解这一历史纪念碑的位置、游览信息和旅行建议。"
+    "title": "凯旋门 The Triumphal Arch (基希讷乌) - 游客指南与地理位置",
+    "description": "探索凯旋门——摩尔多瓦共和国基希讷乌直辖市基希讷乌市的标志性地标。查看位置地图、开放详情、大国民议会广场周边及旅行建议。"
   },
   "header": {
     "home": "首页",
@@ -11,16 +11,45 @@
     "backToHome": "返回首页"
   },
   "hero": {
-    "title": "凯旋门",
-    "subtitle": "历史纪念碑 · 基希讷乌",
+    "title": "凯旋门 (基希讷乌)",
+    "subtitle": "历史纪念碑 · 大国民议会广场",
     "rating": "4.7",
-    "reviewCount": "7,629 条评价",
+    "reviewCount": "7,915 条评价",
     "type": "历史纪念碑",
-    "openMaps": "在Google地图上查看位置"
+    "openMaps": "在Google地图上查看位置",
+    "mapsLink": "https://maps.app.goo.gl/5fERqY3q8DvdoLFL6"
   },
   "intro": {
-    "title": "探索凯旋门",
-    "description": "凯旋门（Arcul de Triumf）是位于基希讷乌大国民议会广场的标志性纪念碑。最初为庆祝俄土战争的胜利而建，现已成为摩尔多瓦国家认同和独立的象征。",
+    "title": "关于凯旋门",
+    "description": "欢迎来到<strong>凯旋门</strong>（The Triumphal Arch / Arcul de Triumf），被公认为基希讷乌市中心的<strong>凯旋门地标</strong>。位于<strong>摩尔多瓦共和国</strong>，<strong>基希讷乌直辖市</strong>，<strong>基希讷乌市</strong>的心脏地带，本目的地是游客探访该地区的核心枢纽。最初为庆祝俄土战争胜利而建，现已成为摩尔多瓦国家认同与独立的象征。",
+    "breadcrumb": [
+      "凯旋门",
+      "基希讷乌",
+      "基希讷乌直辖市",
+      "摩尔多瓦共和国"
+    ],
+    "nearbyLandmarks": {
+      "title": "凯旋门周边地标与景点",
+      "description": "参观<strong>凯旋门</strong>时，游客可轻松探索周边的历史地标和景点，包括<strong>大国民议会广场</strong>和<strong>基督诞生大教堂</strong>。",
+      "items": [
+        {
+          "name": "大国民议会广场",
+          "desc": "基希讷乌的中央公共广场，举办重大国家庆典和活动。"
+        },
+        {
+          "name": "基督诞生大教堂",
+          "desc": "摩尔多瓦主要东正教大教堂，紧邻凯旋门。"
+        },
+        {
+          "name": "总统府",
+          "desc": "摩尔多瓦总统官邸，俯瞰大国民议会广场。"
+        },
+        {
+          "name": "斯特凡大公中央公园",
+          "desc": "基希讷乌最古老的公园，距凯旋门步行可达。"
+        }
+      ]
+    },
     "visitGuide": {
       "title": "游览建议",
       "items": [
@@ -40,7 +69,7 @@
     }
   },
   "knowledge": {
-    "title": "关于凯旋门",
+    "title": "凯旋门的历史与意义",
     "sections": [
       {
         "id": "history",
@@ -59,7 +88,7 @@
       },
       {
         "id": "location",
-        "title": "位置与周边",
+        "title": "凯旋门在基希讷乌的位置与游览方式",
         "content": "凯旋门位于基希讷乌市中心的大国民议会广场，周围环绕着重要的政府建筑，包括总统府和议会大厦，是构成该市历史中心的重要组成部分。"
       }
     ]
@@ -75,7 +104,7 @@
     "city": "城市",
     "cityValue": "基希讷乌",
     "googleRating": "谷歌评分",
-    "googleRatingValue": "4.7 (7,629)",
+    "googleRatingValue": "4.7 (7,915)",
     "phone": "电话",
     "phoneValue": "+373 22 201 707",
     "address": "地址",
@@ -328,5 +357,23 @@
   "officialManagement": {
     "title": "关于凯旋门",
     "text": "凯旋门是位于基希讷乌市中心的重要历史纪念碑，代表着摩尔多瓦共和国国家认同的象征。该纪念碑及周边广场区域由基希讷乌市政厅与摩尔多瓦文化部共同进行保护与旅游管理。"
+  },
+  "faq": {
+    "title": "常见问题",
+    "subtitle": "规划行程的必备信息",
+    "items": [
+      {
+        "question": "凯旋门位于哪里？",
+        "answer": "凯旋门位于摩尔多瓦共和国基希讷乌直辖市基希讷乌市大国民议会广场。"
+      },
+      {
+        "question": "参观凯旋门需要门票吗？",
+        "answer": "是的，凯旋门是公共空间，全年白天时段均可免费参观。"
+      },
+      {
+        "question": "凯旋门周边有哪些值得游览的景点？",
+        "answer": "周边景点包括大国民议会广场、基督诞生大教堂、总统府和斯特凡大公中央公园，均在步行范围内。"
+      }
+    ]
   }
 }

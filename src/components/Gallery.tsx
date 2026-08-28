@@ -1,35 +1,74 @@
 'use client';
 
-import { useTranslations, useMessages } from 'next-intl';
+import { useTranslations, useMessages, useLocale } from 'next-intl';
 import { useState, useCallback } from 'react';
 
-const photos = [
-  { src: '/gallery/the-triumphal-arch-1.jpg', alt: 'The Triumphal Arch Photo 1' },
-  { src: '/gallery/the-triumphal-arch-2.jpg', alt: 'The Triumphal Arch Photo 2' },
-  { src: '/gallery/the-triumphal-arch-3.jpg', alt: 'The Triumphal Arch Photo 3' },
-  { src: '/gallery/the-triumphal-arch-4.jpg', alt: 'The Triumphal Arch Photo 4' },
-  { src: '/gallery/the-triumphal-arch-5.jpg', alt: 'The Triumphal Arch Photo 5' },
-  { src: '/gallery/the-triumphal-arch-6.jpg', alt: 'The Triumphal Arch Photo 6' },
-  { src: '/gallery/the-triumphal-arch-7.jpg', alt: 'The Triumphal Arch Photo 7' },
-  { src: '/gallery/the-triumphal-arch-8.jpg', alt: 'The Triumphal Arch Photo 8' },
-  { src: '/gallery/the-triumphal-arch-9.jpg', alt: 'The Triumphal Arch Photo 9' },
-  { src: '/gallery/the-triumphal-arch-10.jpg', alt: 'The Triumphal Arch Photo 10' },
-  { src: '/gallery/the-triumphal-arch-11.jpg', alt: 'The Triumphal Arch Photo 11' },
-  { src: '/gallery/the-triumphal-arch-12.jpg', alt: 'The Triumphal Arch Photo 12' },
-  { src: '/gallery/the-triumphal-arch-13.jpg', alt: 'The Triumphal Arch Photo 13' },
-];
+const photoAltTemplates = {
+  en: [
+    'The Triumphal Arch - Main hero view in Chișinău, Republic of Moldova',
+    'The Triumphal Arch - Facade view - Great National Assembly Square',
+    'The Triumphal Arch - Bas-relief architectural detail',
+    'The Triumphal Arch - Panoramic angle with Great National Assembly Square',
+    'The Triumphal Arch - Neoclassical columns close-up',
+    'The Triumphal Arch - Front view with surrounding square',
+    'The Triumphal Arch - Winter scene in Chișinău',
+    'The Triumphal Arch - View towards government buildings',
+    'The Triumphal Arch - Night view with illumination',
+    'The Triumphal Arch - Sculptural details on facade',
+    'The Triumphal Arch - Visitors exploring the monument',
+    'The Triumphal Arch - Official ceremony at Great National Assembly Square',
+    'The Triumphal Arch - Architectural detail of capital',
+  ],
+  ro: [
+    'Arcul de Triumf - Vedere principală în Chișinău, Republica Moldova',
+    'Arcul de Triumf - Vedere fațadă - Piața Marii Adunări Naționale',
+    'Arcul de Triumf - Detaliu basorelief arhitectural',
+    'Arcul de Triumf - Unghi panoramic cu Piața Marii Adunări Naționale',
+    'Arcul de Triumf - Prim-plan coloane neoclasice',
+    'Arcul de Triumf - Vedere frontală cu piața înconjurătoare',
+    'Arcul de Triumf - Scenă de iarnă în Chișinău',
+    'Arcul de Triumf - Vedere spre clădirile guvernamentale',
+    'Arcul de Triumf - Vedere de noapte cu iluminare',
+    'Arcul de Triumf - Detalii sculpturale pe fațadă',
+    'Arcul de Triumf - Vizitatori explorând monumentul',
+    'Arcul de Triumf - Ceremonie oficială la Piața Marii Adunări Naționale',
+    'Arcul de Triumf - Detaliu arhitectural al capitelului',
+  ],
+  zh: [
+    '凯旋门 The Triumphal Arch - 摩尔多瓦共和国基希讷乌市主景',
+    '凯旋门 - 正面景观 - 大国民议会广场',
+    '凯旋门 - 浮雕建筑细节',
+    '凯旋门 - 大国民议会广场全景角度',
+    '凯旋门 - 新古典主义柱廊特写',
+    '凯旋门 - 正面及周边广场',
+    '凯旋门 - 基希讷乌冬季景色',
+    '凯旋门 - 政府大楼方向景观',
+    '凯旋门 - 灯光夜景',
+    '凯旋门 - 立面雕塑细节',
+    '凯旋门 - 游客参观纪念碑',
+    '凯旋门 - 大国民议会广场官方典礼',
+    '凯旋门 - 柱头建筑细节',
+  ],
+};
 
 export default function Gallery() {
   const t = useTranslations('gallery');
   const messages = useMessages() as any;
+  const locale = useLocale() as keyof typeof photoAltTemplates;
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isLightboxOpen, setIsLightboxOpen] = useState(false);
   const [showAll, setShowAll] = useState(true);
   const captions = (messages?.gallery?.captions || []) as string[];
 
-  const galleryPhotos = photos.map((photo, i) => ({
+  const templates = photoAltTemplates[locale] || photoAltTemplates.en;
+  const basePhotos = templates.map((alt, i) => ({
+    src: `/gallery/the-triumphal-arch-${i + 1}.jpg`,
+    alt,
+  }));
+
+  const galleryPhotos = basePhotos.map((photo, i) => ({
     ...photo,
-    alt: captions[i] || photo.alt,
+    alt: captions[i] ? `${photo.alt.split(' - ')[0]} - ${captions[i]}` : photo.alt,
   }));
 
   const goToPrevious = useCallback(() => {

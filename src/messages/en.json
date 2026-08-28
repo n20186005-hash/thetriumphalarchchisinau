@@ -1,7 +1,7 @@
 {
   "meta": {
-    "title": "The Triumphal Arch",
-    "description": "Complete guide to The Triumphal Arch in Chișinău. Learn about this historic monument, its location, visiting information, and travel tips."
+    "title": "The Triumphal Arch (Chișinău) - Visitor Guide & Location",
+    "description": "Discover The Triumphal Arch, the iconic landmark in Chișinău, Chișinău Municipality, Republic of Moldova. View location map, opening details, nearby Great National Assembly Square, and travel tips."
   },
   "header": {
     "home": "Home",
@@ -11,17 +11,45 @@
     "backToHome": "Back to Home"
   },
   "hero": {
-    "title": "The Triumphal Arch",
-    "subtitle": "Historic Monument · Chișinău",
+    "title": "The Triumphal Arch (Chișinău)",
+    "subtitle": "Historic Monument · Great National Assembly Square",
     "rating": "4.7",
-    "reviewCount": "7,629 reviews",
+    "reviewCount": "7,915 reviews",
     "type": "Historic Monument",
     "openMaps": "View on Google Maps",
     "mapsLink": "https://maps.app.goo.gl/5fERqY3q8DvdoLFL6"
   },
   "intro": {
-    "title": "Discover The Triumphal Arch",
-    "description": "The Triumphal Arch (Arcul de Triumf) is an iconic monument located in the Great National Assembly Square in Chișinău. Originally built to celebrate the victory in the Russo-Turkish War, it has become a symbol of Moldova's national identity and independence.",
+    "title": "About The Triumphal Arch",
+    "description": "Welcome to <strong>The Triumphal Arch</strong>, widely recognized as the central <strong>The Triumphal Arch landmark</strong> of Chișinău. Located in the heart of <strong>Chișinău</strong>, <strong>Chișinău Municipality</strong>, <strong>Republic of Moldova</strong>, this destination serves as a primary hub for travelers visiting the region. Originally built to celebrate the victory in the Russo-Turkish War, it has become a symbol of Moldova's national identity and independence.",
+    "breadcrumb": [
+      "The Triumphal Arch",
+      "Chișinău",
+      "Chișinău Municipality",
+      "Republic of Moldova"
+    ],
+    "nearbyLandmarks": {
+      "title": "Landmarks & Attractions Around The Triumphal Arch",
+      "description": "When visiting <strong>The Triumphal Arch</strong>, visitors can easily explore surrounding historical landmarks and points of interest, including <strong>Great National Assembly Square</strong> and <strong>Cathedral of Christ's Nativity</strong>.",
+      "items": [
+        {
+          "name": "Great National Assembly Square",
+          "desc": "The central public square of Chișinău, hosting major national celebrations and events."
+        },
+        {
+          "name": "Cathedral of Christ's Nativity",
+          "desc": "The main Orthodox cathedral of Moldova, located adjacent to the Triumphal Arch."
+        },
+        {
+          "name": "Presidential Palace",
+          "desc": "Official residence of the President of Moldova, overlooking the Great National Assembly Square."
+        },
+        {
+          "name": "Ștefan cel Mare Central Park",
+          "desc": "The oldest park in Chișinău, a short walk from the Triumphal Arch."
+        }
+      ]
+    },
     "visitGuide": {
       "title": "Visit Tips",
       "items": [
@@ -41,7 +69,7 @@
     }
   },
   "knowledge": {
-    "title": "About The Triumphal Arch",
+    "title": "History & Significance of The Triumphal Arch",
     "sections": [
       {
         "id": "history",
@@ -60,7 +88,7 @@
       },
       {
         "id": "location",
-        "title": "Location & Surroundings",
+        "title": "Location & How to Visit The Triumphal Arch in Chișinău",
         "content": "Located in the heart of Chișinău at the Great National Assembly Square, the monument is surrounded by important government buildings including the Presidency and Parliament, forming an integral part of the city's historic center."
       }
     ]
@@ -76,7 +104,7 @@
     "city": "City",
     "cityValue": "Chișinău",
     "googleRating": "Google Rating",
-    "googleRatingValue": "4.7 (7,629)",
+    "googleRatingValue": "4.7 (7,915)",
     "phone": "Phone",
     "phoneValue": "+373 22 201 707",
     "address": "Address",
@@ -329,5 +357,23 @@
   "officialManagement": {
     "title": "About The Triumphal Arch",
     "text": "The Triumphal Arch is an important historic monument located in the heart of Chișinău, representing a symbol of the national identity of the Republic of Moldova. The monument and the surrounding square area are jointly protected and managed for tourism by the Chișinău City Hall and the Ministry of Culture of Moldova."
+  },
+  "faq": {
+    "title": "Frequently Asked Questions",
+    "subtitle": "Essential information for planning your visit",
+    "items": [
+      {
+        "question": "Where is The Triumphal Arch located?",
+        "answer": "The Triumphal Arch is located in Great National Assembly Square, Chișinău, Chișinău Municipality, Republic of Moldova."
+      },
+      {
+        "question": "Is The Triumphal Arch free to visit?",
+        "answer": "Yes, The Triumphal Arch is a public space and is free to visit year-round during daylight hours."
+      },
+      {
+        "question": "What are the best nearby attractions around The Triumphal Arch?",
+        "answer": "Nearby attractions include Great National Assembly Square, Cathedral of Christ's Nativity, Presidential Palace, and Ștefan cel Mare Central Park, all within walking distance."
+      }
+    ]
   }
 }

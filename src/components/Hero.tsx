@@ -1,7 +1,14 @@
-import { useTranslations } from 'next-intl';
+import { useTranslations, useLocale } from 'next-intl';
 
 export default function Hero() {
   const t = useTranslations('hero');
+  const locale = useLocale();
+  const altMap: Record<string, string> = {
+    en: 'The Triumphal Arch - Main view in Chișinău, Republic of Moldova',
+    ro: 'Arcul de Triumf - Vedere principală în Chișinău, Republica Moldova',
+    zh: '凯旋门 The Triumphal Arch - 摩尔多瓦共和国基希讷乌市主景',
+  };
+  const heroAlt = altMap[locale] || altMap.en;
 
   return (
     <section className="relative min-h-screen flex items-end pb-16 sm:pb-24 overflow-hidden">
@@ -9,8 +16,9 @@ export default function Hero() {
       <div className="absolute inset-0">
         <img
           src="/gallery/the-triumphal-arch-1.jpg"
-          alt="The Triumphal Arch"
+          alt={heroAlt}
           className="w-full h-full object-cover"
+          loading="eager"
         />
         <div className="absolute inset-0" style={{ background: 'var(--hero-overlay)' }} />
       </div>

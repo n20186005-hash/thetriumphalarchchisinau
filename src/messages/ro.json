@@ -1,7 +1,7 @@
 {
   "meta": {
-    "title": "Arcul de Triumf",
-    "description": "Ghid complet pentru Arcul de Triumf din Chișinău. Aflați despre această atracție, locație, informații de vizitare și sfaturi de călătorie."
+    "title": "Arcul de Triumf (Chișinău) - Ghid Vizitatori & Locație",
+    "description": "Descoperiți Arcul de Triumf, monumentul iconic din Chișinău, Municipiul Chișinău, Republica Moldova. Vizualizați harta locației, detalii de deschidere, apropierea Pieței Marii Adunări Naționale și sfaturi de călătorie."
   },
   "header": {
     "home": "Acasă",
@@ -11,16 +11,45 @@
     "backToHome": "Înapoi la acasă"
   },
   "hero": {
-    "title": "Arcul de Triumf",
-    "subtitle": "Monument istoric · Chișinău",
+    "title": "Arcul de Triumf (Chișinău)",
+    "subtitle": "Monument istoric · Piața Marii Adunări Naționale",
     "rating": "4.7",
-    "reviewCount": "7,629 recenzii",
+    "reviewCount": "7,915 recenzii",
     "type": "Monument istoric",
-    "openMaps": "Vezi pe Google Maps"
+    "openMaps": "Vezi pe Google Maps",
+    "mapsLink": "https://maps.app.goo.gl/5fERqY3q8DvdoLFL6"
   },
   "intro": {
-    "title": "Descoperă Arcul de Triumf",
-    "description": "Arcul de Triumf din Chișinău este un monument iconic situat în Piața Marii Adunări Naționale. Construit pentru a celebra victoria în Războiul de Independență și ulterior pentru a comemora diverse evenimente istorice, acesta reprezintă un simbol al identității naționale a Republicii Moldova.",
+    "title": "Despre Arcul de Triumf",
+    "description": "Bun venit la <strong>Arcul de Triumf</strong>, recunoscut pe scară largă drept monumentul central al <strong>Arcului de Triumf</strong> din Chișinău. Situat în inima <strong>Chișinăului</strong>, <strong>Municipiului Chișinău</strong>, <strong>Republicii Moldova</strong>, această destinație servește drept nod principal pentru călătorii care vizitează regiunea. Construit pentru a celebra victoria în Războiul de Independență și ulterior pentru a comemora diverse evenimente istorice, acesta reprezintă un simbol al identității naționale a Republicii Moldova.",
+    "breadcrumb": [
+      "Arcul de Triumf",
+      "Chișinău",
+      "Municipiul Chișinău",
+      "Republica Moldova"
+    ],
+    "nearbyLandmarks": {
+      "title": "Repere și Atracții din Jurul Arcului de Triumf",
+      "description": "La vizitarea <strong>Arcului de Triumf</strong>, vizitatorii pot explora cu ușurință reperele istorice și punctele de interes din jur, inclusiv <strong>Piața Marii Adunări Naționale</strong> și <strong>Catedrala „Nașterea Domnului”</strong>.",
+      "items": [
+        {
+          "name": "Piața Marii Adunări Naționale",
+          "desc": "Piața publică centrală a Chișinăului, gazdă a marilor sărbători naționale și evenimente."
+        },
+        {
+          "name": "Catedrala „Nașterea Domnului”",
+          "desc": "Principala catedrală ortodoxă a Moldovei, situată lângă Arcul de Triumf."
+        },
+        {
+          "name": "Palatul Președinției",
+          "desc": "Reședința oficială a Președintelui Republicii Moldova, cu vedere spre Piața Marii Adunări Naționale."
+        },
+        {
+          "name": "Parcul Central „Ștefan cel Mare”",
+          "desc": "Cel mai vechi parc din Chișinău, la scurtă distanță de mers pe jos de Arcul de Triumf."
+        }
+      ]
+    },
     "visitGuide": {
       "title": "Sfaturi pentru vizitare",
       "items": [
@@ -30,7 +59,7 @@
       ]
     },
     "alsoKnownAs": {
-      "title": "Momentul important",
+      "title": "Repere importante",
       "items": [
         "Piața Marii Adunări Naționale",
         "Arhitectură neoclasică",
@@ -40,7 +69,7 @@
     }
   },
   "knowledge": {
-    "title": "Despre Arcul de Triumf",
+    "title": "Istorie și Importanță a Arcului de Triumf",
     "sections": [
       {
         "id": "history",
@@ -59,7 +88,7 @@
       },
       {
         "id": "location",
-        "title": "Amplasare și împrejurimi",
+        "title": "Locație și Cum să Vizitați Arcul de Triumf din Chișinău",
         "content": "Situat în inima Chișinăului, în Piața Marii Adunări Naționale, monumentul este înconjurat de clădiri guvernamentale importante, inclusiv clădirea Președinției și a Parlamentului, fiind parte integrantă a centrului istoric al orașului."
       }
     ]
@@ -75,7 +104,7 @@
     "city": "Oraș",
     "cityValue": "Chișinău",
     "googleRating": "Evaluare Google",
-    "googleRatingValue": "4.7 (7,629)",
+    "googleRatingValue": "4.7 (7,915)",
     "phone": "Telefon",
     "phoneValue": "+373 22 201 707",
     "address": "Adresă",
@@ -328,5 +357,23 @@
   "officialManagement": {
     "title": "Despre Arcul de Triumf",
     "text": "Arcul de Triumf este un monument istoric important situat în inima Chișinăului, reprezentând un simbol al identității naționale a Republicii Moldova. Monumentul și zona pieței înconjurătoare sunt protejate și gestionate în comun pentru turism de către Primăria Municipiului Chișinău și Ministerul Culturii al Republicii Moldova."
+  },
+  "faq": {
+    "title": "Întrebări Frecvente",
+    "subtitle": "Informații esențiale pentru planificarea vizitei",
+    "items": [
+      {
+        "question": "Unde este situat Arcul de Triumf?",
+        "answer": "Arcul de Triumf este situat în Piața Marii Adunări Naționale, Chișinău, Municipiul Chișinău, Republica Moldova."
+      },
+      {
+        "question": "Este gratuită vizitarea Arcului de Triumf?",
+        "answer": "Da, Arcul de Triumf este un spațiu public și este gratuit de vizitat pe tot parcursul anului, în timpul orelor de zi."
+      },
+      {
+        "question": "Care sunt cele mai bune atracții din apropierea Arcului de Triumf?",
+        "answer": "Atracțiile din apropiere includ Piața Marii Adunări Naționale, Catedrala „Nașterea Domnului”, Palatul Președinției și Parcul Central „Ștefan cel Mare”, toate la distanță scurtă de mers pe jos."
+      }
+    ]
   }
 }
