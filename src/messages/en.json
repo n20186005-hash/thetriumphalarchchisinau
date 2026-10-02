@@ -1,6 +1,6 @@
 {
   "meta": {
-    "title": "The Triumphal Arch (Chișinău) - Visitor Guide & Location",
+    "title": "The Triumphal Arch Chișinău – History, Location & Visitor Guide",
     "description": "Discover The Triumphal Arch, the iconic landmark in Chișinău, Chișinău Municipality, Republic of Moldova. View location map, opening details, nearby Great National Assembly Square, and travel tips."
   },
   "header": {
@@ -14,7 +14,7 @@
     "title": "The Triumphal Arch (Chișinău)",
     "subtitle": "Historic Monument · Great National Assembly Square",
     "rating": "4.7",
-    "reviewCount": "7,915 reviews",
+    "reviewCount": "8,019 reviews",
     "type": "Historic Monument",
     "openMaps": "View on Google Maps",
     "mapsLink": "https://maps.app.goo.gl/5fERqY3q8DvdoLFL6"
@@ -93,6 +93,12 @@
       }
     ]
   },
+  "restoration": {
+    "title": "Restoration of the Triumphal Arch (2026–2027)",
+    "body": "In September 2026, the Government of the Republic of Moldova approved the measures needed to prepare for the restoration of the Triumphal Arch in Chișinău. During 2026, technical documentation and feasibility studies are underway, and the actual restoration work is planned to begin between March and April 2027. Until the works are completed, the monument remains open to the public, although some on-site activities may temporarily affect access to the area.",
+    "updated": "Last updated: October 2026",
+    "source": "Source: Government of the Republic of Moldova"
+  },
   "basicInfo": {
     "title": "Basic Information",
     "officialName": "Official Name",
@@ -104,7 +110,7 @@
     "city": "City",
     "cityValue": "Chișinău",
     "googleRating": "Google Rating",
-    "googleRatingValue": "4.7 (7,915)",
+    "googleRatingValue": "4.7 (8,019)",
     "phone": "Phone",
     "phoneValue": "+373 22 201 707",
     "address": "Address",
@@ -238,44 +244,7 @@
     "title": "Visitor Reviews",
     "declaration": "Visitor feedback can be viewed via Google Maps.",
     "moreReviews": "View more reviews on Google Maps",
-    "items": [
-      {
-        "name": "Ion P.",
-        "rating": 5,
-        "date": "2026-03-15",
-        "text": "A not-to-be-missed symbol of Chișinău. The architecture is impressive and the location is perfect for photography."
-      },
-      {
-        "name": "Maria T.",
-        "rating": 5,
-        "date": "2026-02-20",
-        "text": "I visited this monument during a parade. The atmosphere was fantastic, and the monument looks spectacular."
-      },
-      {
-        "name": "Andrei M.",
-        "rating": 4,
-        "date": "2026-01-10",
-        "text": "A place full of history. It's free and accessible anytime. I recommend daytime visiting for ideal lighting for photos."
-      },
-      {
-        "name": "Elena C.",
-        "rating": 5,
-        "date": "2025-12-05",
-        "text": "One of the most beautiful monuments in Chișinău. It's a perfect place to understand the history and culture of Moldova."
-      },
-      {
-        "name": "Vasile D.",
-        "rating": 5,
-        "date": "2025-11-18",
-        "text": "I was impressed by the architectural details. It's a landmark in Chișinău and an important national symbol."
-      },
-      {
-        "name": "Ana S.",
-        "rating": 5,
-        "date": "2025-10-30",
-        "text": "Perfect for a weekend walk. The monument is always well-maintained and offers a perspective on Moldova's history."
-      }
-    ]
+    "items": []
   },
   "mapSection": {
     "title": "Map Location",

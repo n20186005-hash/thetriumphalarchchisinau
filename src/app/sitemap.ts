@@ -2,8 +2,9 @@ import { MetadataRoute } from 'next';
 import { routing } from '@/i18n/routing';
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = 'https://thetriumphalarchchisinau.com';
-  
+  const baseUrl = 'https://www.thetriumphalarchchisinau.com';
+  const defaultLocale = routing.defaultLocale;
+
   // All supported locales
   const locales = routing.locales;
 
@@ -19,8 +20,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   routes.forEach((route) => {
     locales.forEach((locale) => {
+      const prefix = locale === defaultLocale ? '' : `/${locale}`;
       sitemapEntries.push({
-        url: `${baseUrl}/${locale}${route}`,
+        url: `${baseUrl}${prefix}${route}`,
         lastModified: new Date(),
         changeFrequency: route === '' ? 'weekly' : 'monthly',
         priority: route === '' ? 1 : 0.5,

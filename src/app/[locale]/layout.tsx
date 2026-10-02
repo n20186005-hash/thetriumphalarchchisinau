@@ -5,7 +5,7 @@ import { routing } from '@/i18n/routing';
 import type { Metadata } from 'next';
 
 const DOMAIN = 'thetriumphalarchchisinau.com';
-const BASE_URL = `https://${DOMAIN}`;
+const BASE_URL = `https://www.${DOMAIN}`;
 const HERO_IMAGE = `${BASE_URL}/gallery/the-triumphal-arch-1.jpg`;
 const MAPS_SHARE_URL = 'https://maps.app.goo.gl/5fERqY3q8DvdoLFL6';
 const GOVT_TOURISM_URL = 'https://turism.gov.md/';
@@ -43,8 +43,8 @@ const SEO_ENTITIES = {
   },
   ro: {
     name: 'Arcul de Triumf',
-    alternateName: ['Arcul de Triumf', 'Chișinău Arcul de Triumf'],
-    description: 'Ghid complet de vizitare pentru Arcul de Triumf din Chișinău, Municipiul Chișinău, Republica Moldova.',
+    alternateName: ['Arcul de Triumf', 'Chișinău Arcul de Triumf', 'Porțile Sfinte', 'The Triumphal Arch'],
+    description: 'Ghid complet de vizitare pentru Arcul de Triumf din Chișinău, monument istoric în Piața Marii Adunări Naționale, Republica Moldova.',
     streetAddress: 'Piața Marii Adunări Naționale',
     addressLocality: 'Chișinău',
     addressRegion: 'Municipiul Chișinău',
@@ -53,8 +53,8 @@ const SEO_ENTITIES = {
     latitude: 47.024783,
     longitude: 28.8326026,
     imageAlt: 'Arcul de Triumf - Vedere principală în Chișinău, Republica Moldova',
-    ogTitle: 'Arcul de Triumf - Ghid de Călătorie Chișinău',
-    ogDescription: 'Ghid oficial de vizitare pentru Arcul de Triumf din Chișinău, Municipiul Chișinău, Republica Moldova.',
+    ogTitle: 'Arcul de Triumf Chișinău – Istorie, Locație & Ghid de Vizitare',
+    ogDescription: 'Descoperă Arcul de Triumf din Chișinău: istorie, locație în Piața Marii Adunări Naționale, acces, fotografii, atracții din apropiere și informații utile pentru vizită.',
     faq: [
       {
         question: 'Unde este situat Arcul de Triumf?',
@@ -63,6 +63,22 @@ const SEO_ENTITIES = {
       {
         question: 'Este gratuită vizitarea Arcului de Triumf?',
         answer: 'Da, Arcul de Triumf este un spațiu public și este gratuit de vizitat pe tot parcursul anului, în timpul orelor de zi.'
+      },
+      {
+        question: 'Cât de înalt este Arcul de Triumf?',
+        answer: 'Arcul de Triumf are o înălțime de aproximativ 13 metri și este realizat din piatră albă, în stil neoclasic, cu coloane și basoreliefuri.'
+      },
+      {
+        question: 'Care este istoria Arcului de Triumf?',
+        answer: 'Arcul de Triumf a fost construit la începutul anilor 1840 pentru a comemora victoria armatei ruse în războiul ruso-turc. Clopotul monumental amplasat în arc a fost turnat din tunuri otomane capturate.'
+      },
+      {
+        question: 'Unde pot parca mașina lângă Arcul de Triumf?',
+        answer: 'În centrul Chișinăului parcarea este limitată și cu plată. Cele mai apropiate locuri de parcare se află pe străzile adiacente Pieței Marii Adunări Naționale; se recomandă transportul public sau mersul pe jos.'
+      },
+      {
+        question: 'Când va fi restaurat Arcul de Triumf?',
+        answer: 'Guvernul Republicii Moldova a aprobat în septembrie 2026 măsurile pentru pregătirea restaurării; lucrările sunt planificate să înceapă în perioada martie–aprilie 2027.'
       },
       {
         question: 'Care sunt cele mai bune atracții din apropierea Arcului de Triumf?',
@@ -117,7 +133,7 @@ export async function generateMetadata({
 
   const zhUrl = `${BASE_URL}/zh`;
   const enUrl = `${BASE_URL}/en`;
-  const roUrl = `${BASE_URL}/ro`;
+  const roUrl = `${BASE_URL}/`;
   
   let selfUrl = enUrl;
   if (locale === 'zh') selfUrl = zhUrl;
@@ -125,7 +141,7 @@ export async function generateMetadata({
 
   let ogLocale = 'en_US';
   if (locale === 'zh') ogLocale = 'zh_CN';
-  if (locale === 'ro') ogLocale = 'ro_RO';
+  if (locale === 'ro') ogLocale = 'ro_MD';
 
   return {
     title: messages.meta.title,
@@ -133,9 +149,9 @@ export async function generateMetadata({
     alternates: {
       canonical: selfUrl,
       languages: {
-        'zh': zhUrl,
+        'zh-CN': zhUrl,
         'en': enUrl,
-        'ro': roUrl,
+        'ro-MD': roUrl,
         'x-default': roUrl,
       },
     },
@@ -189,7 +205,7 @@ export default async function LocaleLayout({
     name: entity.name,
     alternateName: entity.alternateName,
     description: entity.description,
-    url: BASE_URL,
+    url: selfUrl,
     image: [HERO_IMAGE],
     isAccessibleForFree: true,
     address: {
@@ -225,7 +241,7 @@ export default async function LocaleLayout({
   return (
     <html lang={locale === 'zh' ? 'zh-CN' : locale === 'ro' ? 'ro' : 'en'} suppressHydrationWarning>
       <head>
-        <link rel="canonical" href={BASE_URL} />
+        <link rel="canonical" href={selfUrl} />
         <meta property="og:image" content={HERO_IMAGE} />
         <meta property="og:image:alt" content={entity.imageAlt} />
         <script

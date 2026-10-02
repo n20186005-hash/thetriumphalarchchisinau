@@ -1,7 +1,7 @@
 {
   "meta": {
-    "title": "Arcul de Triumf (Chișinău) - Ghid Vizitatori & Locație",
-    "description": "Descoperiți Arcul de Triumf, monumentul iconic din Chișinău, Municipiul Chișinău, Republica Moldova. Vizualizați harta locației, detalii de deschidere, apropierea Pieței Marii Adunări Naționale și sfaturi de călătorie."
+    "title": "Arcul de Triumf Chișinău – Istorie, Locație & Ghid de Vizitare",
+    "description": "Descoperă Arcul de Triumf din Chișinău: istorie, locație în Piața Marii Adunări Naționale, acces, fotografii, atracții din apropiere și informații utile pentru vizită."
   },
   "header": {
     "home": "Acasă",
@@ -11,17 +11,17 @@
     "backToHome": "Înapoi la acasă"
   },
   "hero": {
-    "title": "Arcul de Triumf (Chișinău)",
+    "title": "Arcul de Triumf din Chișinău",
     "subtitle": "Monument istoric · Piața Marii Adunări Naționale",
     "rating": "4.7",
-    "reviewCount": "7,915 recenzii",
+    "reviewCount": "8,019 recenzii Google",
     "type": "Monument istoric",
     "openMaps": "Vezi pe Google Maps",
     "mapsLink": "https://maps.app.goo.gl/5fERqY3q8DvdoLFL6"
   },
   "intro": {
     "title": "Despre Arcul de Triumf",
-    "description": "Bun venit la <strong>Arcul de Triumf</strong>, recunoscut pe scară largă drept monumentul central al <strong>Arcului de Triumf</strong> din Chișinău. Situat în inima <strong>Chișinăului</strong>, <strong>Municipiului Chișinău</strong>, <strong>Republicii Moldova</strong>, această destinație servește drept nod principal pentru călătorii care vizitează regiunea. Construit pentru a celebra victoria în Războiul de Independență și ulterior pentru a comemora diverse evenimente istorice, acesta reprezintă un simbol al identității naționale a Republicii Moldova.",
+    "description": "<strong>Arcul de Triumf din Chișinău</strong>, cunoscut și sub denumirea istorică de Porțile Sfinte, este un monument situat în Piața Marii Adunări Naționale, în centrul capitalei Republicii Moldova. Este unul dintre cele mai cunoscute simboluri arhitecturale ale Chișinăului și se află chiar lângă Catedrala Mitropolitană „Nașterea Domnului”. Construit la începutul anilor 1840 pentru a comemora victoria armatei ruse în războiul ruso-turc, monumentul este o atracție gratuită, accesibilă tot timpul anului, și punctul de plecare ideal pentru o plimbare prin centrul istoric al orașului.",
     "breadcrumb": [
       "Arcul de Triumf",
       "Chișinău",
@@ -73,25 +73,31 @@
     "sections": [
       {
         "id": "history",
-        "title": "Context istoric",
-        "content": "Arcul de Triumf din Chișinău a fost construit inițial în secolul al XIX-lea pentru a celebra victoria Imperiului Rus în Războiul de Independență. De-a lungul timpului, monumentul a suferit modificări și renovări, devenind un simbol al rezistenței și identității naționale a Moldovei."
+        "title": "Istoria Arcului de Triumf",
+        "content": "Arcul de Triumf din Chișinău a fost construit la începutul anilor 1840 pentru a comemora victoria armatei ruse în războiul ruso-turc (1828–1829). În acea perioadă, monumentul marca intrarea în ansamblul central al orașului și devenise un simbol al victoriei și al identității locale. De-a lungul secolelor, Arcul de Triumf a rămas un punct de referință al capitalei, fiind inclus în ceremonii oficiale, parade și evenimente naționale."
       },
       {
         "id": "architecture",
-        "title": "Arhitectură și design",
-        "content": "Monumentul prezintă elemente de arhitectură neoclasică, cu coloane elegante și basoreliefuri care înfățișează scene istorice. Designul său impunător îl face să fie un punct de referință în peisajul urban al Chișinăului."
+        "title": "Arhitectură și clopotul Arcului de Triumf",
+        "content": "Monumentul are o înălțime de aproximativ 13 metri și este realizat din piatră albă, în stil neoclasic, cu coloane elegante și basoreliefuri care înfățișează scene istorice. Elementul său cel mai cunoscut este clopotul monumental amplasat în arc: acesta a fost turnat din tunuri otomane capturate în timpul războiului ruso-turc și era folosit pentru a anunța marile sărbători și evenimentele publice din Piața Marii Adunări Naționale."
       },
       {
-        "id": "significance",
-        "title": "Importanță culturală",
-        "content": "Arcul de Triumf nu este doar un monument arhitectural, ci și un loc de întâlnire pentru evenimente publice, parade și ceremonii oficiale. Acesta ocupă un loc central în viața civică a capitalei Moldovei."
+        "id": "portile-sfinte",
+        "title": "Porțile Sfinte",
+        "content": "Printre localnici, Arcul de Triumf este cunoscut și sub denumirea istorică de Porțile Sfinte („Sfintele Porți”). Această poreclă reflectă rolul său simbolic de poartă către centrul spiritual al Chișinăului, aflat la doar câțiva pași de Catedrala Mitropolitană „Nașterea Domnului”. Denumirea este încă folosită în ghidurile turistice și de către locuitorii orașului."
       },
       {
         "id": "location",
-        "title": "Locație și Cum să Vizitați Arcul de Triumf din Chișinău",
-        "content": "Situat în inima Chișinăului, în Piața Marii Adunări Naționale, monumentul este înconjurat de clădiri guvernamentale importante, inclusiv clădirea Președinției și a Parlamentului, fiind parte integrantă a centrului istoric al orașului."
+        "title": "Unde se află Arcul de Triumf și cum îl vizitezi",
+        "content": "Arcul de Triumf este situat în Piața Marii Adunări Naționale, în inima Chișinăului, înconjurat de clădiri guvernamentale importante, inclusiv Palatul Președinției și clădirea Parlamentului. Fiind un monument în aer liber, accesul este liber și poate fi vizitat pe tot parcursul anului, în timpul orelor de zi. Este punctul de plecare ideal pentru o plimbare prin centrul istoric."
       }
     ]
+  },
+  "restoration": {
+    "title": "Restaurarea Arcului de Triumf (2026–2027)",
+    "body": "În septembrie 2026, Guvernul Republicii Moldova a aprobat măsurile necesare pentru pregătirea restaurării Arcului de Triumf din Chișinău. În cursul anului 2026 sunt în desfășurare lucrările de documentare tehnică și studiile de fezabilitate, iar începerea efectivă a restaurării este planificată pentru perioada martie–aprilie 2027. Până la finalizarea lucrărilor, monumentul rămâne deschis publicului, însă anumite activități de pe șantier pot afecta temporar accesul în zonă.",
+    "updated": "Ultima actualizare: Octombrie 2026",
+    "source": "Sursă: Guvernul Republicii Moldova"
   },
   "basicInfo": {
     "title": "Informații de bază",
@@ -104,7 +110,7 @@
     "city": "Oraș",
     "cityValue": "Chișinău",
     "googleRating": "Evaluare Google",
-    "googleRatingValue": "4.7 (7,915)",
+    "googleRatingValue": "4.7 (8,019)",
     "phone": "Telefon",
     "phoneValue": "+373 22 201 707",
     "address": "Adresă",
@@ -238,44 +244,7 @@
     "title": "Recenzii de la vizitatori",
     "declaration": "Recenziile vizitatorilor pot fi vizualizate pe Google Maps.",
     "moreReviews": "Vezi mai multe recenzii pe Google Maps",
-    "items": [
-      {
-        "name": "Ion P.",
-        "rating": 5,
-        "date": "2026-03-15",
-        "text": "Un simbol al Chișinăului de neratat. Arhitectura este impresionantă și locația este perfectă pentru fotografii."
-      },
-      {
-        "name": "Maria T.",
-        "rating": 5,
-        "date": "2026-02-20",
-        "text": "Am vizitat acest monument în timpul unei parade. Atmosfera a fost fantastică, iar monumentul arată spectaculos."
-      },
-      {
-        "name": "Andrei M.",
-        "rating": 4,
-        "date": "2026-01-10",
-        "text": "Un loc plin de istorie. Este gratuit și accesibil oricând. Recomand vizitarea în timpul zilei pentru lumina ideală pentru fotografii."
-      },
-      {
-        "name": "Elena C.",
-        "rating": 5,
-        "date": "2025-12-05",
-        "text": "Unul dintre cele mai frumoase monumente din Chișinău. Este un loc perfect pentru a înțelege istoria și cultura Moldovei."
-      },
-      {
-        "name": "Vasile D.",
-        "rating": 5,
-        "date": "2025-11-18",
-        "text": "Am fost impresionat de detaliile arhitecturale. Este un loc de referință în Chișinău și un simbol național important."
-      },
-      {
-        "name": "Ana S.",
-        "rating": 5,
-        "date": "2025-10-30",
-        "text": "Perfect pentru o plimbare de weekend. Monumentul este întotdeauna bine întreținut și oferă o perspectivă asupra istoriei Moldovei."
-      }
-    ]
+    "items": []
   },
   "mapSection": {
     "title": "Locație pe hartă",
@@ -369,6 +338,26 @@
       {
         "question": "Este gratuită vizitarea Arcului de Triumf?",
         "answer": "Da, Arcul de Triumf este un spațiu public și este gratuit de vizitat pe tot parcursul anului, în timpul orelor de zi."
+      },
+      {
+        "question": "Cât de înalt este Arcul de Triumf?",
+        "answer": "Arcul de Triumf are o înălțime de aproximativ 13 metri și este realizat din piatră albă, în stil neoclasic, cu coloane și basoreliefuri."
+      },
+      {
+        "question": "Care este istoria Arcului de Triumf?",
+        "answer": "Arcul de Triumf a fost construit la începutul anilor 1840 pentru a comemora victoria armatei ruse în războiul ruso-turc. Clopotul monumental amplasat în arc a fost turnat din tunuri otomane capturate."
+      },
+      {
+        "question": "Unde pot parca mașina lângă Arcul de Triumf?",
+        "answer": "În centrul Chișinăului parcarea este limitată și cu plată. Cele mai apropiate locuri de parcare se află pe străzile adiacente Pieței Marii Adunări Naționale; se recomandă transportul public sau mersul pe jos."
+      },
+      {
+        "question": "Se pot face fotografii la Arcul de Triumf?",
+        "answer": "Da, monumentul este o destinație populară pentru fotografii, mai ales în lumină naturală dimineața și la apus, cu Piața Marii Adunări Naționale în fundal."
+      },
+      {
+        "question": "Când va fi restaurat Arcul de Triumf?",
+        "answer": "Guvernul Republicii Moldova a aprobat în septembrie 2026 măsurile pentru pregătirea restaurării; lucrările sunt planificate să înceapă în perioada martie–aprilie 2027."
       },
       {
         "question": "Care sunt cele mai bune atracții din apropierea Arcului de Triumf?",

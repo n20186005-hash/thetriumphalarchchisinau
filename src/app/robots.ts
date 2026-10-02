@@ -6,6 +6,6 @@ export default function robots(): MetadataRoute.Robots {
       userAgent: '*',
       allow: '/',
     },
-    sitemap: 'https://thetriumphalarchchisinau.com/sitemap.xml',
+    sitemap: 'https://www.thetriumphalarchchisinau.com/sitemap.xml',
   };
 }
