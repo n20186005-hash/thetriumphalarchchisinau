@@ -1,7 +1,7 @@
 {
   "meta": {
-    "title": "The Triumphal Arch Chișinău – History, Location & Visitor Guide",
-    "description": "Discover The Triumphal Arch, the iconic landmark in Chișinău, Chișinău Municipality, Republic of Moldova. View location map, opening details, nearby Great National Assembly Square, and travel tips."
+    "title": "Triumphal Arch, Chișinău: History & Visitor Guide",
+    "description": "Discover the history of the Triumphal Arch in Chișinău, how to get there, where to photograph the monument and what to visit nearby. Independent guide."
   },
   "header": {
     "home": "Home",
@@ -21,7 +21,7 @@
   },
   "intro": {
     "title": "About The Triumphal Arch",
-    "description": "Welcome to <strong>The Triumphal Arch</strong>, widely recognized as the central <strong>The Triumphal Arch landmark</strong> of Chișinău. Located in the heart of <strong>Chișinău</strong>, <strong>Chișinău Municipality</strong>, <strong>Republic of Moldova</strong>, this destination serves as a primary hub for travelers visiting the region. Originally built to celebrate the victory in the Russo-Turkish War, it has become a symbol of Moldova's national identity and independence.",
+    "description": "Welcome to <strong>The Triumphal Arch</strong>, widely recognized as the central <strong>The Triumphal Arch landmark</strong> of Chișinău. Located in the heart of <strong>Chișinău</strong>, <strong>Chișinău Municipality</strong>, <strong>Republic of Moldova</strong>, this destination serves as a primary hub for travelers visiting the region. Built in 1840–1841 to commemorate the victory of the Russian Empire in the Russo-Turkish War (1828–1829), it has become a symbol of Moldova's national identity.",
     "breadcrumb": [
       "The Triumphal Arch",
       "Chișinău",
@@ -74,7 +74,7 @@
       {
         "id": "history",
         "title": "Historical Background",
-        "content": "The Triumphal Arch in Chișinău was originally built in the 19th century to celebrate the victory of the Russian Empire in the Russo-Turkish War. Over time, the monument underwent modifications and renovations, becoming a symbol of Moldova's resilience and national identity."
+        "content": "The Triumphal Arch in Chișinău was built in 1840–1841 to commemorate the victory of the Russian Empire in the Russo-Turkish War (1828–1829). Over time, the monument underwent modifications and renovations, becoming a symbol of Moldova's resilience and national identity."
       },
       {
         "id": "architecture",
@@ -325,7 +325,7 @@
   },
   "officialManagement": {
     "title": "About The Triumphal Arch",
-    "text": "The Triumphal Arch is an important historic monument located in the heart of Chișinău, representing a symbol of the national identity of the Republic of Moldova. The monument and the surrounding square area are jointly protected and managed for tourism by the Chișinău City Hall and the Ministry of Culture of Moldova."
+    "text": "The Triumphal Arch is a monument of national importance, in state public ownership and protected by the Monument Inspection and Restoration Agency. On 22 September 2026, the Government of the Republic of Moldova approved the measures to prepare the restoration of the monument; details on how the worksite will be organised will be announced officially in due course. This site is an independent travel guide and is not an official source."
   },
   "faq": {
     "title": "Frequently Asked Questions",

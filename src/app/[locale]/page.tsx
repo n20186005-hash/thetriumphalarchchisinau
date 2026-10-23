@@ -11,6 +11,7 @@ import RestorationSection from '@/components/RestorationSection';
 import RouteSection from '@/components/RouteSection';
 import PhotoSpotsSection from '@/components/PhotoSpotsSection';
 import Gallery from '@/components/Gallery';
+import TopicLinks from '@/components/TopicLinks';
 import Reviews from '@/components/Reviews';
 import FAQSection from '@/components/FAQSection';
 import MapEmbed from '@/components/MapEmbed';
@@ -39,6 +40,7 @@ export default async function HomePage({
         <RouteSection />
         <PhotoSpotsSection />
         <Gallery />
+        <TopicLinks locale={(locale as 'ro' | 'en' | 'zh')} />
         <Reviews />
         <FAQSection />
         <MapEmbed />

@@ -1,7 +1,7 @@
 {
   "meta": {
-    "title": "Arcul de Triumf Chișinău – Istorie, Locație & Ghid de Vizitare",
-    "description": "Descoperă Arcul de Triumf din Chișinău: istorie, locație în Piața Marii Adunări Naționale, acces, fotografii, atracții din apropiere și informații utile pentru vizită."
+    "title": "Arcul de Triumf din Chișinău: istorie și ghid de vizitare",
+    "description": "Descoperă istoria Arcului de Triumf din Chișinău, cum ajungi, unde poți fotografia monumentul și ce poți vizita în apropiere. Ghid independent."
   },
   "header": {
     "home": "Acasă",
@@ -21,7 +21,7 @@
   },
   "intro": {
     "title": "Despre Arcul de Triumf",
-    "description": "<strong>Arcul de Triumf din Chișinău</strong>, cunoscut și sub denumirea istorică de Porțile Sfinte, este un monument situat în Piața Marii Adunări Naționale, în centrul capitalei Republicii Moldova. Este unul dintre cele mai cunoscute simboluri arhitecturale ale Chișinăului și se află chiar lângă Catedrala Mitropolitană „Nașterea Domnului”. Construit la începutul anilor 1840 pentru a comemora victoria armatei ruse în războiul ruso-turc, monumentul este o atracție gratuită, accesibilă tot timpul anului, și punctul de plecare ideal pentru o plimbare prin centrul istoric al orașului.",
+    "description": "<strong>Arcul de Triumf din Chișinău</strong>, cunoscut și sub denumirea istorică de Porțile Sfinte, este un monument situat în Piața Marii Adunări Naționale, în centrul capitalei Republicii Moldova. Este unul dintre cele mai cunoscute simboluri arhitecturale ale Chișinăului și se află chiar lângă Catedrala Mitropolitană „Nașterea Domnului”. Construit în perioada 1840–1841 pentru a comemora victoria Imperiului Rus în Războiul Ruso-Turc (1828–1829), monumentul este o atracție gratuită, accesibilă tot timpul anului, și punctul de plecare ideal pentru o plimbare prin centrul istoric al orașului.",
     "breadcrumb": [
       "Arcul de Triumf",
       "Chișinău",
@@ -74,7 +74,7 @@
       {
         "id": "history",
         "title": "Istoria Arcului de Triumf",
-        "content": "Arcul de Triumf din Chișinău a fost construit la începutul anilor 1840 pentru a comemora victoria armatei ruse în războiul ruso-turc (1828–1829). În acea perioadă, monumentul marca intrarea în ansamblul central al orașului și devenise un simbol al victoriei și al identității locale. De-a lungul secolelor, Arcul de Triumf a rămas un punct de referință al capitalei, fiind inclus în ceremonii oficiale, parade și evenimente naționale."
+        "content": "Arcul de Triumf din Chișinău a fost construit în perioada 1840–1841 pentru a comemora victoria Imperiului Rus în Războiul Ruso-Turc (1828–1829). În acea perioadă, monumentul marca intrarea în ansamblul central al orașului și devenise un simbol al victoriei și al identității locale. De-a lungul secolelor, Arcul de Triumf a rămas un punct de referință al capitalei, fiind inclus în ceremonii oficiale, parade și evenimente naționale."
       },
       {
         "id": "architecture",
@@ -325,7 +325,7 @@
   },
   "officialManagement": {
     "title": "Despre Arcul de Triumf",
-    "text": "Arcul de Triumf este un monument istoric important situat în inima Chișinăului, reprezentând un simbol al identității naționale a Republicii Moldova. Monumentul și zona pieței înconjurătoare sunt protejate și gestionate în comun pentru turism de către Primăria Municipiului Chișinău și Ministerul Culturii al Republicii Moldova."
+    "text": "Arcul de Triumf este un monument istoric de importanță națională, aflat în proprietatea publică a statului și protejat de Agenția de Inspectare și Restaurare a Monumentelor. La 22 septembrie 2026, Guvernul Republicii Moldova a aprobat măsurile pentru pregătirea restaurării monumentului; detaliile privind organizarea efectivă a șantierului urmează să fie comunicate oficial. Acest site este un ghid turistic independent și nu reprezintă o sursă oficială."
   },
   "faq": {
     "title": "Întrebări Frecvente",
@@ -345,7 +345,7 @@
       },
       {
         "question": "Care este istoria Arcului de Triumf?",
-        "answer": "Arcul de Triumf a fost construit la începutul anilor 1840 pentru a comemora victoria armatei ruse în războiul ruso-turc. Clopotul monumental amplasat în arc a fost turnat din tunuri otomane capturate."
+        "answer": "Arcul de Triumf a fost construit în perioada 1840–1841 pentru a comemora victoria Imperiului Rus în Războiul Ruso-Turc (1828–1829). Clopotul monumental amplasat în arc a fost turnat din tunuri otomane capturate."
       },
       {
         "question": "Unde pot parca mașina lângă Arcul de Triumf?",

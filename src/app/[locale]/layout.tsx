@@ -1,7 +1,7 @@
 import { NextIntlClientProvider } from 'next-intl';
 import { getMessages, setRequestLocale } from 'next-intl/server';
 import { notFound } from 'next/navigation';
-import { routing } from '@/i18n/routing';
+import { routing, type Locale } from '@/i18n/routing';
 import type { Metadata } from 'next';
 
 const DOMAIN = 'thetriumphalarchchisinau.com';
@@ -11,11 +11,31 @@ const MAPS_SHARE_URL = 'https://maps.app.goo.gl/5fERqY3q8DvdoLFL6';
 const GOVT_TOURISM_URL = 'https://turism.gov.md/';
 const ATTRACTION_ID = `${BASE_URL}/#attraction`;
 
-const SEO_ENTITIES = {
+// Canonical base URL per locale (always-prefix mode).
+function localeUrl(locale: Locale): string {
+  return `${BASE_URL}/${locale}`;
+}
+
+const SEO_ENTITIES: Record<Locale, {
+  name: string;
+  alternateName: string[];
+  description: string;
+  streetAddress: string;
+  addressLocality: string;
+  addressRegion: string;
+  postalCode: string;
+  addressCountry: string;
+  latitude: number;
+  longitude: number;
+  imageAlt: string;
+  ogTitle: string;
+  ogDescription: string;
+  faq: { question: string; answer: string }[];
+}> = {
   en: {
     name: 'The Triumphal Arch',
-    alternateName: ['The Triumphal Arch', 'Chișinău The Triumphal Arch'],
-    description: 'Comprehensive visitor guide to The Triumphal Arch in Chișinău, Chișinău Municipality, Republic of Moldova.',
+    alternateName: ['The Triumphal Arch', 'Chișinău Triumphal Arch'],
+    description: 'Independent travel guide to The Triumphal Arch in Chișinău, Chișinău Municipality, Republic of Moldova.',
     streetAddress: 'Great National Assembly Square',
     addressLocality: 'Chișinău',
     addressRegion: 'Chișinău Municipality',
@@ -24,27 +44,27 @@ const SEO_ENTITIES = {
     latitude: 47.024783,
     longitude: 28.8326026,
     imageAlt: 'The Triumphal Arch - Main view in Chișinău, Republic of Moldova',
-    ogTitle: 'The Triumphal Arch - Chișinău Travel Guide',
-    ogDescription: 'Official visitor guide to The Triumphal Arch in Chișinău, Chișinău Municipality, Republic of Moldova.',
+    ogTitle: 'The Triumphal Arch, Chișinău – History & Visitor Guide',
+    ogDescription: 'Independent travel guide to The Triumphal Arch in Chișinău: history, how to get there, photo spots and nearby attractions.',
     faq: [
       {
         question: 'Where is The Triumphal Arch located?',
-        answer: 'The Triumphal Arch is located in Great National Assembly Square, Chișinău, Chișinău Municipality, Republic of Moldova.'
+        answer: 'The Triumphal Arch is located in Great National Assembly Square, Chișinău, Chișinău Municipality, Republic of Moldova.',
       },
       {
         question: 'Is The Triumphal Arch free to visit?',
-        answer: 'Yes, The Triumphal Arch is a public space and is free to visit year-round during daylight hours.'
+        answer: 'Yes, The Triumphal Arch is a public monument and is free to visit year-round during daylight hours.',
       },
       {
         question: 'What are the best nearby attractions around The Triumphal Arch?',
-        answer: 'Nearby attractions include Great National Assembly Square, Cathedral of Christ\'s Nativity, Presidential Palace, and Ștefan cel Mare Central Park, all within walking distance.'
-      }
-    ]
+        answer: 'Nearby attractions include Great National Assembly Square, the Cathedral of Christ\'s Nativity, the Presidential Palace and Ștefan cel Mare Central Park, all within a short walk.',
+      },
+    ],
   },
   ro: {
     name: 'Arcul de Triumf',
     alternateName: ['Arcul de Triumf', 'Chișinău Arcul de Triumf', 'Porțile Sfinte', 'The Triumphal Arch'],
-    description: 'Ghid complet de vizitare pentru Arcul de Triumf din Chișinău, monument istoric în Piața Marii Adunări Naționale, Republica Moldova.',
+    description: 'Ghid independent de vizitare pentru Arcul de Triumf din Chișinău, monument istoric în Piața Marii Adunări Naționale, Republica Moldova.',
     streetAddress: 'Piața Marii Adunări Naționale',
     addressLocality: 'Chișinău',
     addressRegion: 'Municipiul Chișinău',
@@ -53,43 +73,43 @@ const SEO_ENTITIES = {
     latitude: 47.024783,
     longitude: 28.8326026,
     imageAlt: 'Arcul de Triumf - Vedere principală în Chișinău, Republica Moldova',
-    ogTitle: 'Arcul de Triumf Chișinău – Istorie, Locație & Ghid de Vizitare',
-    ogDescription: 'Descoperă Arcul de Triumf din Chișinău: istorie, locație în Piața Marii Adunări Naționale, acces, fotografii, atracții din apropiere și informații utile pentru vizită.',
+    ogTitle: 'Arcul de Triumf din Chișinău – Istorie, Locație & Ghid de Vizitare',
+    ogDescription: 'Ghid independent de vizitare a Arcului de Triumf din Chișinău: istorie, cum ajungi, fotografii și atracții din apropiere.',
     faq: [
       {
         question: 'Unde este situat Arcul de Triumf?',
-        answer: 'Arcul de Triumf este situat în Piața Marii Adunări Naționale, Chișinău, Municipiul Chișinău, Republica Moldova.'
+        answer: 'Arcul de Triumf este situat în Piața Marii Adunări Naționale, Chișinău, Municipiul Chișinău, Republica Moldova.',
       },
       {
         question: 'Este gratuită vizitarea Arcului de Triumf?',
-        answer: 'Da, Arcul de Triumf este un spațiu public și este gratuit de vizitat pe tot parcursul anului, în timpul orelor de zi.'
+        answer: 'Da, Arcul de Triumf este un monument public și este gratuit de vizitat pe tot parcursul anului, în timpul orelor de zi.',
       },
       {
         question: 'Cât de înalt este Arcul de Triumf?',
-        answer: 'Arcul de Triumf are o înălțime de aproximativ 13 metri și este realizat din piatră albă, în stil neoclasic, cu coloane și basoreliefuri.'
+        answer: 'Arcul de Triumf are o înălțime de aproximativ 13 metri și este realizat din piatră albă, în stil neoclasic, cu coloane și basoreliefuri.',
       },
       {
         question: 'Care este istoria Arcului de Triumf?',
-        answer: 'Arcul de Triumf a fost construit la începutul anilor 1840 pentru a comemora victoria armatei ruse în războiul ruso-turc. Clopotul monumental amplasat în arc a fost turnat din tunuri otomane capturate.'
+        answer: 'Arcul de Triumf a fost construit în perioada 1840–1841 pentru a comemora victoria Imperiului Rus în Războiul Ruso-Turc (1828–1829). Clopotul monumental amplasat în arc a fost turnat din tunuri otomane capturate.',
       },
       {
         question: 'Unde pot parca mașina lângă Arcul de Triumf?',
-        answer: 'În centrul Chișinăului parcarea este limitată și cu plată. Cele mai apropiate locuri de parcare se află pe străzile adiacente Pieței Marii Adunări Naționale; se recomandă transportul public sau mersul pe jos.'
+        answer: 'În centrul Chișinăului parcarea este limitată și cu plată. Cele mai apropiate locuri de parcare se află pe străzile adiacente Pieței Marii Adunări Naționale; se recomandă transportul public sau mersul pe jos.',
       },
       {
         question: 'Când va fi restaurat Arcul de Triumf?',
-        answer: 'Guvernul Republicii Moldova a aprobat în septembrie 2026 măsurile pentru pregătirea restaurării; lucrările sunt planificate să înceapă în perioada martie–aprilie 2027.'
+        answer: 'Guvernul Republicii Moldova a aprobat în septembrie 2026 măsurile pentru pregătirea restaurării; lucrările sunt planificate să înceapă în perioada martie–aprilie 2027.',
       },
       {
         question: 'Care sunt cele mai bune atracții din apropierea Arcului de Triumf?',
-        answer: 'Atracțiile din apropiere includ Piața Marii Adunări Naționale, Catedrala „Nașterea Domnului”, Palatul Președinției și Parcul Central „Ștefan cel Mare”, toate la distanță scurtă de mers pe jos.'
-      }
-    ]
+        answer: 'Atracțiile din apropiere includ Piața Marii Adunări Naționale, Catedrala „Nașterea Domnului”, Palatul Președinției și Parcul Central „Ștefan cel Mare”, toate la distanță scurtă de mers pe jos.',
+      },
+    ],
   },
   zh: {
     name: '凯旋门 The Triumphal Arch',
     alternateName: ['凯旋门', '基希讷乌凯旋门'],
-    description: '摩尔多瓦共和国基希讷乌直辖市基希讷乌市凯旋门综合游客指南。',
+    description: '摩尔多瓦共和国基希讷乌直辖市基希讷乌市凯旋门独立第三方旅游指南。',
     streetAddress: '大国民议会广场',
     addressLocality: '基希讷乌',
     addressRegion: '基希讷乌直辖市',
@@ -98,23 +118,23 @@ const SEO_ENTITIES = {
     latitude: 47.024783,
     longitude: 28.8326026,
     imageAlt: '凯旋门 - 摩尔多瓦共和国基希讷乌市主景',
-    ogTitle: '凯旋门 - 基希讷乌旅行指南',
-    ogDescription: '摩尔多瓦共和国基希讷乌直辖市基希讷乌市凯旋门官方游客指南。',
+    ogTitle: '基希讷乌凯旋门 - 历史与参观指南',
+    ogDescription: '基希讷乌凯旋门独立第三方旅游指南：历史、交通、拍照机位与周边景点。',
     faq: [
       {
         question: '凯旋门位于哪里？',
-        answer: '凯旋门位于摩尔多瓦共和国基希讷乌直辖市基希讷乌市大国民议会广场。'
+        answer: '凯旋门位于摩尔多瓦共和国基希讷乌直辖市基希讷乌市大国民议会广场。',
       },
       {
         question: '参观凯旋门需要门票吗？',
-        answer: '是的，凯旋门是公共空间，全年白天时段均可免费参观。'
+        answer: '是的，凯旋门是公共纪念碑，全年白天时段均可免费参观。',
       },
       {
         question: '凯旋门周边有哪些值得游览的景点？',
-        answer: '周边景点包括大国民议会广场、基督诞生大教堂、总统府和斯特凡大公中央公园，均在步行范围内。'
-      }
-    ]
-  }
+        answer: '周边景点包括大国民议会广场、基督诞生大教堂、总统府和斯特凡大公中央公园，均在步行范围内。',
+      },
+    ],
+  },
 };
 
 export function generateStaticParams() {
@@ -127,33 +147,27 @@ export async function generateMetadata({
   params: Promise<{ locale: string }>;
 }): Promise<Metadata> {
   const { locale } = await params;
-  const messages = (await import(`@/messages/${locale}.json`)).default;
-  const l = (locale === 'zh' || locale === 'ro' || locale === 'en') ? locale : 'en';
+  const l = (['zh', 'ro', 'en'].includes(locale) ? locale : 'en') as Locale;
+  setRequestLocale(l);
+  const messages = await getMessages();
   const entity = SEO_ENTITIES[l];
+  const selfUrl = localeUrl(l);
 
-  const zhUrl = `${BASE_URL}/zh`;
-  const enUrl = `${BASE_URL}/en`;
-  const roUrl = `${BASE_URL}/`;
-  
-  let selfUrl = enUrl;
-  if (locale === 'zh') selfUrl = zhUrl;
-  if (locale === 'ro') selfUrl = roUrl;
+  const languages: Record<string, string> = {
+    'ro-MD': localeUrl('ro'),
+    'en': localeUrl('en'),
+    'zh-CN': localeUrl('zh'),
+    'x-default': localeUrl('ro'),
+  };
 
-  let ogLocale = 'en_US';
-  if (locale === 'zh') ogLocale = 'zh_CN';
-  if (locale === 'ro') ogLocale = 'ro_MD';
+  const ogLocale = l === 'zh' ? 'zh_CN' : l === 'ro' ? 'ro_MD' : 'en_US';
 
   return {
     title: messages.meta.title,
     description: messages.meta.description,
     alternates: {
       canonical: selfUrl,
-      languages: {
-        'zh-CN': zhUrl,
-        'en': enUrl,
-        'ro-MD': roUrl,
-        'x-default': roUrl,
-      },
+      languages,
     },
     openGraph: {
       title: entity.ogTitle,
@@ -193,10 +207,11 @@ export default async function LocaleLayout({
     notFound();
   }
 
-  setRequestLocale(locale);
+  const l = (['zh', 'ro', 'en'].includes(locale) ? locale : 'en') as Locale;
+  setRequestLocale(l);
   const messages = await getMessages();
-  const l = (locale === 'zh' || locale === 'ro' || locale === 'en') ? locale : 'en';
   const entity = SEO_ENTITIES[l];
+  const selfUrl = localeUrl(l);
 
   const touristAttractionSchema = {
     '@context': 'https://schema.org',
@@ -238,12 +253,18 @@ export default async function LocaleLayout({
     })),
   };
 
+  const breadcrumbSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Chișinău', item: selfUrl },
+      { '@type': 'ListItem', position: 2, name: entity.name, item: selfUrl },
+    ],
+  };
+
   return (
-    <html lang={locale === 'zh' ? 'zh-CN' : locale === 'ro' ? 'ro' : 'en'} suppressHydrationWarning>
+    <html lang={l === 'zh' ? 'zh-CN' : l} suppressHydrationWarning>
       <head>
-        <link rel="canonical" href={selfUrl} />
-        <meta property="og:image" content={HERO_IMAGE} />
-        <meta property="og:image:alt" content={entity.imageAlt} />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(touristAttractionSchema) }}
@@ -251,6 +272,10 @@ export default async function LocaleLayout({
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
         />
         <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXX" crossOrigin="anonymous" />
         <meta name="google-adsense-account" content="ca-pub-XXXXXXXXXX" />

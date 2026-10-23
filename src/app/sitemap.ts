@@ -1,34 +1,36 @@
 import { MetadataRoute } from 'next';
-import { routing } from '@/i18n/routing';
+import { routing, type Locale } from '@/i18n/routing';
+import { TOPICS, topicLocales } from '@/data/topics';
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = 'https://www.thetriumphalarchchisinau.com';
-  const defaultLocale = routing.defaultLocale;
-
-  // All supported locales
-  const locales = routing.locales;
-
-  // The routes in your application
-  const routes = [
-    '',
-    '/privacy-policy',
-    '/terms-of-service',
-    '/cookie-settings',
-  ];
 
   const sitemapEntries: MetadataRoute.Sitemap = [];
 
-  routes.forEach((route) => {
-    locales.forEach((locale) => {
-      const prefix = locale === defaultLocale ? '' : `/${locale}`;
+  // Homepages + policy pages per locale
+  const staticRoutes = ['', '/privacy-policy', '/terms-of-service', '/cookie-settings'];
+  for (const locale of routing.locales as Locale[]) {
+    for (const route of staticRoutes) {
       sitemapEntries.push({
-        url: `${baseUrl}${prefix}${route}`,
+        url: `${baseUrl}/${locale}${route}`,
         lastModified: new Date(),
         changeFrequency: route === '' ? 'weekly' : 'monthly',
-        priority: route === '' ? 1 : 0.5,
+        priority: route === '' ? 1 : 0.4,
       });
-    });
-  });
+    }
+  }
+
+  // Topic pages (only locales with content)
+  for (const topic of TOPICS) {
+    for (const locale of topicLocales(topic)) {
+      sitemapEntries.push({
+        url: `${baseUrl}/${locale}/${topic.slug}`,
+        lastModified: new Date(),
+        changeFrequency: 'monthly',
+        priority: 0.7,
+      });
+    }
+  }
 
   return sitemapEntries;
 }
