@@ -1,6 +1,9 @@
-import { setRequestLocale } from 'next-intl/server';
+import { setRequestLocale, getMessages } from 'next-intl/server';
 import { useTranslations, useLocale, useMessages } from 'next-intl';
 import type { Metadata } from 'next';
+
+const BASE_URL = 'https://www.thetriumphalarchchisinau.com';
+const PAGE = 'privacy-policy';
 
 export async function generateMetadata({
   params,
@@ -8,19 +11,28 @@ export async function generateMetadata({
   params: Promise<{ locale: string }>;
 }): Promise<Metadata> {
   const { locale } = await params;
-  const baseUrl = 'https://willowcreekhoodoos.com';
-  const zhUrl = `${baseUrl}/zh/privacy-policy`;
-  const enUrl = `${baseUrl}/en/privacy-policy`;
-  const selfUrl = locale === 'zh' ? zhUrl : enUrl;
+  const l = (['zh', 'ro', 'en'].includes(locale) ? locale : 'en') as 'zh' | 'en' | 'ro';
+  const messages = await getMessages();
+  const selfUrl = `${BASE_URL}/${l}/${PAGE}`;
+  const ogLocale = l === 'zh' ? 'zh_CN' : l === 'ro' ? 'ro_MD' : 'en_US';
 
   return {
+    title: (messages as any).privacy?.title,
     alternates: {
       canonical: selfUrl,
       languages: {
-        'zh': zhUrl,
-        'en': enUrl,
-        'x-default': zhUrl,
+        'ro-MD': `${BASE_URL}/ro/${PAGE}`,
+        en: `${BASE_URL}/en/${PAGE}`,
+        'zh-CN': `${BASE_URL}/zh/${PAGE}`,
+        'x-default': `${BASE_URL}/ro/${PAGE}`,
       },
+    },
+    openGraph: {
+      title: (messages as any).privacy?.title,
+      url: selfUrl,
+      siteName: 'The Triumphal Arch',
+      locale: ogLocale,
+      type: 'website',
     },
   };
 }
